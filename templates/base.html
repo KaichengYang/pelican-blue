@@ -45,7 +45,6 @@
     {% if SIDEBAR_DIGEST %}
       <p>{{ SIDEBAR_DIGEST }}</p>
     {% endif %}
-    <br>
 
     {% if TWITTER_USERNAME %}
       <a class="twitter-follow-button"
@@ -83,7 +82,7 @@
         <li><a class="hvr-bounce-to-right" href="/pages/interests">Research interests</a></li>
       </ul>
     </nav>
-    
+
     <nav class="sidebottom">
     <h2>Contact me</h2>
     <p class="social">
@@ -92,28 +91,11 @@
         <a class="hvr-grow" href="{{ link }}" target="_blank" ><i class="fa fa-{{ name|lower }}-square" aria-hidden="true"></i></a>
         {% endfor %}
       {% endif %}
-      {% if FEED_ALL_ATOM %}
-      <a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" rel="alternate">
-        <img src="{{ SITEURL }}/theme/images/icons/rss.png"></a>
-      {% endif %}
-      {% if FEED_ALL_RSS %}
-      <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" rel="alternate">
-        <img src="{{ SITEURL }}/theme/images/icons/rss.png"></a>
-      {% endif %}
     </p>
-
-    {% if DISPLAY_CATEGORIES_ON_MENU and categories %}
-    <h2>Categories</h2>
-    <ul class="navbar">
-      {% for cat, null in categories %}
-      <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-      {% endfor %}
-    </ul> 
-    {% endif %}
     </nav>
 
-
   </aside>
+
 
   <!-- Content -->
   <article>
